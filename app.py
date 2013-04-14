@@ -11,23 +11,7 @@ app = Flask(__name__)
 #                        )
 #CUR = CONN.cursor()
 
-@app.route('/pants')
-def pants():
-    return """<html>
-<head>
-<title>Pants</title>
-<body>URL Routing is Pants!
-</body>
-</html>
-    """
-
-
-@app.route('/')
-def hello():
-    #CUR.execute("""SELECT * FROM members LIMIT 5;""")
-    #record = CUR.next()
-    webmap="240fc14f85eb4ca2949074b8ff7dcbbb"
-    html = """<html>
+HEADER = """<html>
 <head>
 <title>Neighborhood Watch Information System</title>
 <style>
@@ -123,6 +107,21 @@ def hello():
 <div id="mybox">
 
 <center>"""
+
+@app.route('/pants')
+def pants():
+    return HEADER + """<body>URL Routing is Pants!
+</body>
+</html>
+    """
+
+
+@app.route('/')
+def hello():
+    #CUR.execute("""SELECT * FROM members LIMIT 5;""")
+    #record = CUR.next()
+    webmap="240fc14f85eb4ca2949074b8ff7dcbbb"
+    html = HEADER
 
 
     html +="""
