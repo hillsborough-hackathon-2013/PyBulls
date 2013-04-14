@@ -17,7 +17,7 @@ def hello():
     CUR.execute("""SELECT * FROM members LIMIT 5;""")
     record = CUR.next()
     webmap="240fc14f85eb4ca2949074b8ff7dcbbb"
-    return 'HTML = """<html>
+    return HTML = """<html>
 <head>
 <title>Neighborhood Watch Information System</title>
 </head>
