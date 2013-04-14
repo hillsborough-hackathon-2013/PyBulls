@@ -8,7 +8,7 @@ HEADER = """<html>
 <title>Community Geographic Information System</title>
 <style>
    @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400");
-   @import url("http://fonts.googleapis.com/class?family=Raleway:400,900,700,800,600,500,300,200,100");
+   @import url("http://fonts.googleapis.com/css?family=Raleway:400,900,700,800,600,500,300,200,100");
    @import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic");
    @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,300,600,700,800");
    body{
