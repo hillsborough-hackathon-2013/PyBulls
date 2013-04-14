@@ -105,7 +105,8 @@ HEADER = """<html>
 
 @app.route('/pants')
 def pants():
-    return HEADER + """<body>URL Routing is Pants!
+    return HEADER + """<body>Pants!<br/>
+    <img src="media/pants.jpg"/>
 </body>
 </html>
     """
