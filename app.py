@@ -11,6 +11,17 @@ app = Flask(__name__)
 #                        )
 #CUR = CONN.cursor()
 
+@app.route('/pants')
+def pants():
+    return """<html>
+<head>
+<title>Pants</title>
+<body>URL Routing is Pants!
+</body>
+</html>
+    """
+
+
 @app.route('/')
 def hello():
     #CUR.execute("""SELECT * FROM members LIMIT 5;""")
