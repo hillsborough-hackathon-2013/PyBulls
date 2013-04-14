@@ -4,31 +4,19 @@ from flask import Flask
 
 app = Flask(__name__)
 
-CONN = psycopg2.connect(database="d7tqum8ti79ms",
-                        user="oivlwelvilidjf",
-                        password="DSbFeB1X3knNMeQw-7hpXnbUHG",
-                        host="ec2-54-243-125-2.compute-1.amazonaws.com"
-                        )
-CUR = CONN.cursor()
-
-@app.route('/pants/')
-def hello():
-
-    return """<html>
-<head>
-<title>Neighborhood Watch Information System</title>
-</head>
-<body>
-Pants!
-</body>
-</html>""".format(webmap=webmap)
+#CONN = psycopg2.connect(database="d7tqum8ti79ms",
+#                        user="oivlwelvilidjf",
+#                        password="DSbFeB1X3knNMeQw-7hpXnbUHG",
+#                        host="ec2-54-243-125-2.compute-1.amazonaws.com"
+#                        )
+#CUR = CONN.cursor()
 
 @app.route('/')
 def hello():
-    CUR.execute("""SELECT * FROM members LIMIT 5;""")
-    record = CUR.next()
+    #CUR.execute("""SELECT * FROM members LIMIT 5;""")
+    #record = CUR.next()
     webmap="240fc14f85eb4ca2949074b8ff7dcbbb"
-    return """<html>
+    html = """<html>
 <head>
 <title>Neighborhood Watch Information System</title>
 <style>
@@ -124,7 +112,9 @@ def hello():
 <h1>Neighborhood Watch Information System</h1>
 <div id="mybox">
 
-<center>
+<center>"""
+
+    html +="""
 <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.arcgis.com/home/webmap/embedViewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217"></iframe><br /><small><a href="http://www.arcgis.com/home/webmap/viewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217" style="color:#0000FF;text-align:left" target="_blank">View Larger Map</a></small>
 </center>
 </body>
