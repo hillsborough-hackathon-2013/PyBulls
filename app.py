@@ -117,6 +117,18 @@ def capn():
 </html>""".format(webmap=webmap)
     return html
 
+@app.route('/capn/carolyakimo')
+def capn():
+    webmap="302079082f7e43d59195c198169491f8"
+    html = HEADER
+    html +="""
+    Block Captain's View<br>
+<iframe width="1024" height="768" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.arcgis.com/home/webmap/embedViewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217"></iframe><br /><small><a href="http://www.arcgis.com/home/webmap/viewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217" style="color:#0000FF;text-align:left" target="_blank">View Larger Map</a></small>
+</center>
+</body>
+</html>""".format(webmap=webmap)
+    return html
+
 @app.route('/capn/susanelbare')
 def capn():
     webmap="0a72046352e44ad78ac65c204921bbdd"
@@ -133,9 +145,10 @@ def capn():
 def hello():
     #CUR.execute("""SELECT * FROM members LIMIT 5;""")
     #record = CUR.next()
-    webmap="240fc14f85eb4ca2949074b8ff7dcbbb"
+    webmap="5cfe6cefb7e74869940c1fba8ded34aa"
     html = HEADER
     html +="""
+    Public View<br>
 <iframe width="1024" height="768" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.arcgis.com/home/webmap/embedViewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217"></iframe><br /><small><a href="http://www.arcgis.com/home/webmap/viewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217" style="color:#0000FF;text-align:left" target="_blank">View Larger Map</a></small>
 </center>
 </body>
