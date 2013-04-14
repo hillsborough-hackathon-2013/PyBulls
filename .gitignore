@@ -1,2 +1,4 @@
+ENV
 venv
 .pyc
+secrets.py
