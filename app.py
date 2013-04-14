@@ -8,7 +8,7 @@ HEADER = """<html>
 <title>Community Geographic Information System</title>
 <style>
    @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400");
-   @import url("http://fonts.googleapis.com/css?family=Raleway:400,900,700,800,600,500,300,200,100");
+   @import url("http://fonts.googleapis.com/class?family=Raleway:400,900,700,800,600,500,300,200,100");
    @import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic");
    @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,300,600,700,800");
    body{
@@ -73,9 +73,7 @@ HEADER = """<html>
         transition-property: color, background-color;
         transition-timing-function: ease-out, ease-out;
         width: auto;
-        
-}
-    }
+        }
     #mybox{
         border: 10px solid black;
         border-radius:15px;
@@ -94,7 +92,7 @@ HEADER = """<html>
 </b>
 </h1>
 
-<h1>Neighborhood Watch Information System</h1>
+<h1>Community Geographic Information System</h1>
 <div id="mybox">
 
 <center>"""
@@ -102,14 +100,26 @@ HEADER = """<html>
 @app.route('/pants')
 def pants():
     return HEADER + """<body>Pants!<br/>
-    <img src="/static/pants.jpg"/>
+    <img src="/pants.jpg"/>
 </body>
 </html>
     """
 
 @app.route('/capn/dandye')
 def capn():
-    webmap="7fc0d40adb434b3d8c262672ab572d39"
+    webmap="7cd8e154a0d547adb65ca9633054a181"
+    html = HEADER
+    html +="""
+    Block Captain's View<br>
+<iframe width="1024" height="768" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.arcgis.com/home/webmap/embedViewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217"></iframe><br /><small><a href="http://www.arcgis.com/home/webmap/viewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217" style="color:#0000FF;text-align:left" target="_blank">View Larger Map</a></small>
+</center>
+</body>
+</html>""".format(webmap=webmap)
+    return html
+
+@app.route('/capn/susanelbare')
+def capn():
+    webmap="0a72046352e44ad78ac65c204921bbdd"
     html = HEADER
     html +="""
     Block Captain's View<br>
