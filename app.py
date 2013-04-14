@@ -1,21 +1,17 @@
 import os
-import psycopg2
 from flask import Flask
 
 app = Flask(__name__)
 
-#CONN = psycopg2.connect(database="d7tqum8ti79ms",
-#                        user="oivlwelvilidjf",
-#                        password="DSbFeB1X3knNMeQw-7hpXnbUHG",
-#                        host="ec2-54-243-125-2.compute-1.amazonaws.com"
-#                        )
-#CUR = CONN.cursor()
-
 HEADER = """<html>
 <head>
-<title>Neighborhood Watch Information System</title>
+<title>Community Geographic Information System</title>
 <style>
-    body{
+   @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,400");
+   @import url("http://fonts.googleapis.com/css?family=Raleway:400,900,700,800,600,500,300,200,100");
+   @import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic");
+   @import url("http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,300,600,700,800");
+   body{
         font-family: 'Verdana';
     }
     .dash{
