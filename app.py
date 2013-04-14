@@ -95,7 +95,6 @@ def hello():
 
 </head>
 <body>
-<body>
 <center>
 
 
@@ -114,10 +113,8 @@ def hello():
 
 <center>"""
 
-    html ="""<html>
-<head>
-<title>Neighborhood Watch Information System</title>
-</head>
+
+    html +="""
 <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.arcgis.com/home/webmap/embedViewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217"></iframe><br /><small><a href="http://www.arcgis.com/home/webmap/viewer.html?webmap={webmap}&amp;extent=-82.4591,28.0088,-82.4389,28.0217" style="color:#0000FF;text-align:left" target="_blank">View Larger Map</a></small>
 </center>
 </body>
