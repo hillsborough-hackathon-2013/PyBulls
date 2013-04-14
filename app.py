@@ -11,7 +11,7 @@ CONN = psycopg2.connect(database="d7tqum8ti79ms",
                         )
 CUR = CONN.cursor()
 
-@app.route('/pants')
+@app.route('pants/')
 def hello():
 
     return """<html>
